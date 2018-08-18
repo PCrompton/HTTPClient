@@ -7,9 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E876C0DC2128A75B004C1FB2 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876C0DB2128A75B004C1FB2 /* URLSession+Extensions.swift */; };
+		E876C0DE2128A77D004C1FB2 /* URLSessionDataTask+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876C0DD2128A77D004C1FB2 /* URLSessionDataTask+Extensions.swift */; };
 		E8D51BB72126667C00DB7E55 /* HTTPClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D51BAD2126667C00DB7E55 /* HTTPClient.framework */; };
-		E8D51BBC2126667C00DB7E55 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BBB2126667C00DB7E55 /* HTTPClientTests.swift */; };
+		E8D51BBC2126667C00DB7E55 /* HttpClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BBB2126667C00DB7E55 /* HttpClientTests.swift */; };
 		E8D51BBE2126667C00DB7E55 /* HTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D51BB02126667C00DB7E55 /* HTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8D51BC82126678A00DB7E55 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BC72126678A00DB7E55 /* HttpClient.swift */; };
+		E8D51BCB212711E600DB7E55 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BC921266C8F00DB7E55 /* MockURLSession.swift */; };
+		E8D51BCE2127130900DB7E55 /* MockURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BCD2127130900DB7E55 /* MockURLSessionDataTask.swift */; };
+		E8D51BD12127137500DB7E55 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BD02127137500DB7E55 /* URLSessionProtocol.swift */; };
+		E8D51BD32127139900DB7E55 /* URLSessionDataTaskProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BD22127139900DB7E55 /* URLSessionDataTaskProtocol.swift */; };
+		E8D51BD5212714E900DB7E55 /* JsonClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BD4212714E900DB7E55 /* JsonClient.swift */; };
+		E8D51BE121271F1800DB7E55 /* JsonClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BE021271F1800DB7E55 /* JsonClientTests.swift */; };
+		E8D51BE3212724B500DB7E55 /* XCTestCase+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BE2212724B500DB7E55 /* XCTestCase+Extension.swift */; };
+		E8D51BE921274D2500DB7E55 /* HttpHeaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BE821274D2500DB7E55 /* HttpHeaderService.swift */; };
+		E8D51BED21275C6700DB7E55 /* JsonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BEC21275C6700DB7E55 /* JsonService.swift */; };
+		E8D51BF221275EF100DB7E55 /* HttpHeaderServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BF121275EF100DB7E55 /* HttpHeaderServiceTests.swift */; };
+		E8D51BF421275F0E00DB7E55 /* JsonServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BF321275F0E00DB7E55 /* JsonServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +37,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E876C0DB2128A75B004C1FB2 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
+		E876C0DD2128A77D004C1FB2 /* URLSessionDataTask+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionDataTask+Extensions.swift"; sourceTree = "<group>"; };
 		E8D51BAD2126667C00DB7E55 /* HTTPClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HTTPClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8D51BB02126667C00DB7E55 /* HTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
 		E8D51BB12126667C00DB7E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8D51BB62126667C00DB7E55 /* HTTPClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTPClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8D51BBB2126667C00DB7E55 /* HTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
+		E8D51BBB2126667C00DB7E55 /* HttpClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientTests.swift; sourceTree = "<group>"; };
 		E8D51BBD2126667C00DB7E55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8D51BC72126678A00DB7E55 /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		E8D51BC921266C8F00DB7E55 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		E8D51BCD2127130900DB7E55 /* MockURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSessionDataTask.swift; sourceTree = "<group>"; };
+		E8D51BD02127137500DB7E55 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		E8D51BD22127139900DB7E55 /* URLSessionDataTaskProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskProtocol.swift; sourceTree = "<group>"; };
+		E8D51BD4212714E900DB7E55 /* JsonClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonClient.swift; sourceTree = "<group>"; };
+		E8D51BE021271F1800DB7E55 /* JsonClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonClientTests.swift; sourceTree = "<group>"; };
+		E8D51BE2212724B500DB7E55 /* XCTestCase+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Extension.swift"; sourceTree = "<group>"; };
+		E8D51BE821274D2500DB7E55 /* HttpHeaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHeaderService.swift; sourceTree = "<group>"; };
+		E8D51BEC21275C6700DB7E55 /* JsonService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonService.swift; sourceTree = "<group>"; };
+		E8D51BF121275EF100DB7E55 /* HttpHeaderServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHeaderServiceTests.swift; sourceTree = "<group>"; };
+		E8D51BF321275F0E00DB7E55 /* JsonServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +78,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E876C0DA2128A72E004C1FB2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E876C0DB2128A75B004C1FB2 /* URLSession+Extensions.swift */,
+				E876C0DD2128A77D004C1FB2 /* URLSessionDataTask+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		E8D51BA32126667C00DB7E55 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +110,11 @@
 			children = (
 				E8D51BB02126667C00DB7E55 /* HTTPClient.h */,
 				E8D51BB12126667C00DB7E55 /* Info.plist */,
+				E8D51BEE21275C6C00DB7E55 /* Services */,
+				E8D51BCF2127135900DB7E55 /* Protocols */,
+				E8D51BD62127150900DB7E55 /* Clients */,
+				E8D51BCC212712BD00DB7E55 /* MockObjects */,
+				E876C0DA2128A72E004C1FB2 /* Extensions */,
 			);
 			path = HTTPClient;
 			sourceTree = "<group>";
@@ -80,10 +122,66 @@
 		E8D51BBA2126667C00DB7E55 /* HTTPClientTests */ = {
 			isa = PBXGroup;
 			children = (
-				E8D51BBB2126667C00DB7E55 /* HTTPClientTests.swift */,
+				E8D51BEF21275EA100DB7E55 /* Services Tests */,
+				E8D51BF021275EB000DB7E55 /* Clients Tests */,
 				E8D51BBD2126667C00DB7E55 /* Info.plist */,
+				E8D51BE2212724B500DB7E55 /* XCTestCase+Extension.swift */,
 			);
 			path = HTTPClientTests;
+			sourceTree = "<group>";
+		};
+		E8D51BCC212712BD00DB7E55 /* MockObjects */ = {
+			isa = PBXGroup;
+			children = (
+				E8D51BC921266C8F00DB7E55 /* MockURLSession.swift */,
+				E8D51BCD2127130900DB7E55 /* MockURLSessionDataTask.swift */,
+			);
+			path = MockObjects;
+			sourceTree = "<group>";
+		};
+		E8D51BCF2127135900DB7E55 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E8D51BD02127137500DB7E55 /* URLSessionProtocol.swift */,
+				E8D51BD22127139900DB7E55 /* URLSessionDataTaskProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E8D51BD62127150900DB7E55 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				E8D51BC72126678A00DB7E55 /* HttpClient.swift */,
+				E8D51BD4212714E900DB7E55 /* JsonClient.swift */,
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		E8D51BEE21275C6C00DB7E55 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E8D51BE821274D2500DB7E55 /* HttpHeaderService.swift */,
+				E8D51BEC21275C6700DB7E55 /* JsonService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E8D51BEF21275EA100DB7E55 /* Services Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E8D51BF121275EF100DB7E55 /* HttpHeaderServiceTests.swift */,
+				E8D51BF321275F0E00DB7E55 /* JsonServiceTests.swift */,
+			);
+			path = "Services Tests";
+			sourceTree = "<group>";
+		};
+		E8D51BF021275EB000DB7E55 /* Clients Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E8D51BBB2126667C00DB7E55 /* HttpClientTests.swift */,
+				E8D51BE021271F1800DB7E55 /* JsonClientTests.swift */,
+			);
+			path = "Clients Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +246,7 @@
 				TargetAttributes = {
 					E8D51BAC2126667C00DB7E55 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					E8D51BB52126667C00DB7E55 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -194,6 +293,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8D51BD12127137500DB7E55 /* URLSessionProtocol.swift in Sources */,
+				E8D51BCE2127130900DB7E55 /* MockURLSessionDataTask.swift in Sources */,
+				E8D51BD5212714E900DB7E55 /* JsonClient.swift in Sources */,
+				E8D51BCB212711E600DB7E55 /* MockURLSession.swift in Sources */,
+				E8D51BE921274D2500DB7E55 /* HttpHeaderService.swift in Sources */,
+				E8D51BC82126678A00DB7E55 /* HttpClient.swift in Sources */,
+				E8D51BD32127139900DB7E55 /* URLSessionDataTaskProtocol.swift in Sources */,
+				E8D51BED21275C6700DB7E55 /* JsonService.swift in Sources */,
+				E876C0DC2128A75B004C1FB2 /* URLSession+Extensions.swift in Sources */,
+				E876C0DE2128A77D004C1FB2 /* URLSessionDataTask+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +310,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D51BBC2126667C00DB7E55 /* HTTPClientTests.swift in Sources */,
+				E8D51BF221275EF100DB7E55 /* HttpHeaderServiceTests.swift in Sources */,
+				E8D51BE3212724B500DB7E55 /* XCTestCase+Extension.swift in Sources */,
+				E8D51BE121271F1800DB7E55 /* JsonClientTests.swift in Sources */,
+				E8D51BF421275F0E00DB7E55 /* JsonServiceTests.swift in Sources */,
+				E8D51BBC2126667C00DB7E55 /* HttpClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +452,7 @@
 		E8D51BC22126667C00DB7E55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -355,6 +469,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = CromptonApps.HTTPClient;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +478,7 @@
 		E8D51BC32126667C00DB7E55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -387,6 +503,7 @@
 		E8D51BC52126667C00DB7E55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HTTPClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +521,7 @@
 		E8D51BC62126667C00DB7E55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HTTPClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

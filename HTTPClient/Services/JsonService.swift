@@ -8,25 +8,24 @@
 
 import Foundation
 
-class JsonService {
+public class JsonService {
     
-    static func convertToJson(data: Data?) -> Any? {
-        if let data = data {
-            do {
-                return try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-            } catch {
-                return nil
-            }
+    public static func convertToJson(data: Data?) -> Any? {
+        guard let data = data else {
+            return nil
         }
-        return nil
+        return try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
     }
     
-    static func convertToData(object: Any?) -> Data? {
-        if let object = object {
-            if JSONSerialization.isValidJSONObject(object) {
-                return try! JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
-            }
+    public static func convertToData(object: Any?) -> Data? {
+        guard let object = object, isValidJson(object: object) else {
+            return nil
         }
-        return nil
+        return try? JSONSerialization.data(withJSONObject: object, options: .prettyPrinted)
+    }
+    
+    // MARK: Private helper functions
+    private static func isValidJson(object: Any) -> Bool {
+        return JSONSerialization.isValidJSONObject(object)
     }
 }

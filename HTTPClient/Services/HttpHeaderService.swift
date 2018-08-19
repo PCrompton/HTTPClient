@@ -8,17 +8,17 @@
 
 import Foundation
 
-enum HttpHeaderKeys: String {
+public enum HttpHeaderKeys: String {
     case contentType = "Content-Type"
 }
 
-enum HttpContentTypes: String {
+public enum HttpContentTypes: String {
     case applicationJson = "application/json"
 }
 
-class HttpHeaderService {
+public class HttpHeaderService {
 
-    static func setContentType(for headers: HttpHeaders?, with value: String) -> HttpHeaders {
+    public static func setContentType(for headers: HttpHeaders?, with value: String) -> HttpHeaders {
         var mutableHeaders = headers
         if headers == nil {
             mutableHeaders = HttpHeaders()

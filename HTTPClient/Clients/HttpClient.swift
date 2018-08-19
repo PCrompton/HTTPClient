@@ -8,35 +8,35 @@
 
 import Foundation
 
-typealias HttpHeaders = [String: String]
+public typealias HttpHeaders = [String: String]
 
 private enum HttpMethod: String {
     case GET = "GET"
     case POST = "POST"
 }
 
-class HttpClient {
+public class HttpClient {
     
-    typealias completeClosure = ( _ data: Data?, _ error: Error?)->Void
+    public typealias completeClosure = ( _ data: Data?, _ error: Error?)->Void
     
     private let session: URLSessionProtocol
-    var getSession: URLSessionProtocol {
+    public var getSession: URLSessionProtocol {
         return session
     }
-    init(session: URLSessionProtocol) {
+    public init(session: URLSessionProtocol) {
         self.session = session
     }
     
-    convenience init() {
+    public convenience init() {
         self.init(session: URLSession.shared)
     }
     
     //MARK: Public Functions
-    func get(url: URL, headers: HttpHeaders?, callback: @escaping completeClosure) {
+    public func get(url: URL, headers: HttpHeaders?, callback: @escaping completeClosure) {
         submitRequest(url: url, method: .GET, body: nil, headers: headers, callback: callback)
     }
     
-    func post(url: URL, body: Data?, headers: HttpHeaders?, callback: @escaping completeClosure) {
+    public func post(url: URL, body: Data?, headers: HttpHeaders?, callback: @escaping completeClosure) {
         submitRequest(url: url, method: .POST, body: body, headers: headers, callback: callback)
     }
     
@@ -46,8 +46,7 @@ class HttpClient {
         createTaskAndRun(from: request, callback: callback)
     }
     
-    // MARK: Fileprivate Functions
-    fileprivate func createRequest(url: URL, method: HttpMethod, body: Data?, headers: HttpHeaders?) -> URLRequest {
+    private func createRequest(url: URL, method: HttpMethod, body: Data?, headers: HttpHeaders?) -> URLRequest {
         let request = NSMutableURLRequest(url: url)
         request.httpMethod = method.rawValue
         request.httpBody = body
@@ -59,7 +58,7 @@ class HttpClient {
         return request as URLRequest
     }
     
-    fileprivate func createTaskAndRun(from request: URLRequest, callback: @escaping completeClosure){
+    private func createTaskAndRun(from request: URLRequest, callback: @escaping completeClosure){
         let task = session.dataTask(with: request) { (data, response, error) in
             callback(data, error)
         }

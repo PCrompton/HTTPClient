@@ -8,10 +8,10 @@
 
 import Foundation
 
-class MockURLSessionDataTask: URLSessionDataTaskProtocol {
-    private (set) var resumeWasCalled = false
+public class MockURLSessionDataTask: URLSessionDataTaskProtocol {
+    public private(set) var resumeWasCalled = false
     
-    func resume() {
+    public func resume() {
         resumeWasCalled = true
     }
 }

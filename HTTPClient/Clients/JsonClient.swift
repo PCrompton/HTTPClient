@@ -8,30 +8,29 @@
 
 import Foundation
 
-class JsonClient {
-    typealias completeClosure = (_ jsonData: Any?, _ error: Error?) -> Void
+public class JsonClient {
+    public typealias completeClosure = (_ jsonData: Any?, _ error: Error?) -> Void
     
-    var httpClient: HttpClient
-    var getHttpClient: HttpClient {
+    private var httpClient: HttpClient
+    public var getHttpClient: HttpClient {
         return httpClient
     }
-    init(session: URLSessionProtocol) {
+    public init(session: URLSessionProtocol) {
         self.httpClient = HttpClient(session: session)
     }
-    
-    convenience init() {
+    public convenience init() {
         self.init(session: URLSession.shared)
     }
     
     // MARK: Public Functions
-    func get(url: URL, headers: HttpHeaders?, callback: @escaping completeClosure) {
+    public func get(url: URL, headers: HttpHeaders?, callback: @escaping completeClosure) {
         httpClient.get(url: url, headers: HttpHeaderService.setContentType(for: headers, with: HttpContentTypes.applicationJson.rawValue)) { (data, error) in
             let jsonData = JsonService.convertToJson(data: data)
             callback(jsonData, error)
         }
     }
     
-    func post(url: URL, body: Any?, headers: HttpHeaders?, callback: @escaping completeClosure) {
+    public func post(url: URL, body: Any?, headers: HttpHeaders?, callback: @escaping completeClosure) {
         httpClient.post(url: url, body: JsonService.convertToData(object: body), headers: HttpHeaderService.setContentType(for: headers, with: HttpContentTypes.applicationJson.rawValue)) { (data, error) in
             let jsonData = JsonService.convertToJson(data: data)
             callback(jsonData, error)

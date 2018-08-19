@@ -8,19 +8,19 @@
 
 import Foundation
 
-class MockURLSession: URLSessionProtocol {
+public class MockURLSession: URLSessionProtocol {
     
-    var nextDataTask = MockURLSessionDataTask()
-    var nextData: Data?
-    var nextError: Error?
+    public var nextDataTask = MockURLSessionDataTask()
+    public var nextData: Data?
+    public var nextError: Error?
     
-    private (set) var dataTaskCalled: Bool = false
-    private (set) var lastURL: URL?
-    private (set) var lastBody: Data?
-    private (set) var lastMethod: String?
-    private (set) var lastHttpHeaders: HttpHeaders?
+    public private(set) var dataTaskCalled: Bool = false
+    public private(set) var lastURL: URL?
+    public private(set) var lastBody: Data?
+    public private(set) var lastMethod: String?
+    public private(set) var lastHttpHeaders: HttpHeaders?
     
-    func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol {
+    public func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol {
         dataTaskCalled = true
         lastURL = request.url
         lastBody = request.httpBody

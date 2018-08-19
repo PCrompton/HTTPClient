@@ -20,6 +20,8 @@ public class MockURLSession: URLSessionProtocol {
     public private(set) var lastMethod: String?
     public private(set) var lastHttpHeaders: HttpHeaders?
     
+    public init() {}
+    
     public func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol {
         dataTaskCalled = true
         lastURL = request.url

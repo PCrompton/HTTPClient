@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E876C0DC2128A75B004C1FB2 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876C0DB2128A75B004C1FB2 /* URLSession+Extensions.swift */; };
 		E876C0DE2128A77D004C1FB2 /* URLSessionDataTask+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E876C0DD2128A77D004C1FB2 /* URLSessionDataTask+Extensions.swift */; };
-		E8D51BB72126667C00DB7E55 /* HTTPClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8D51BAD2126667C00DB7E55 /* HTTPClient.framework */; };
 		E8D51BBC2126667C00DB7E55 /* HttpClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BBB2126667C00DB7E55 /* HttpClientTests.swift */; };
 		E8D51BBE2126667C00DB7E55 /* HTTPClient.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D51BB02126667C00DB7E55 /* HTTPClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E8D51BC82126678A00DB7E55 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D51BC72126678A00DB7E55 /* HttpClient.swift */; };
@@ -71,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D51BB72126667C00DB7E55 /* HTTPClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,10 +379,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos11.4;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -438,9 +436,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos11.4;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
